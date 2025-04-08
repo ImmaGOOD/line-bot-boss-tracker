@@ -1,0 +1,24 @@
+{
+  "name": "line-bot-boss-tracker",
+  "version": "1.0.0",
+  "description": "A Line Bot that sends notifications for boss spawns in games",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@line/bot-sdk": "^7.5.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "google-auth-library": "^8.7.0",
+    "googleapis": "^118.0.0",
+    "node-schedule": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
