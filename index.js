@@ -10,7 +10,13 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 const app = express()
-app.use(express.json())
+app.use((req, res, next) => {
+  if (req.originalUrl === '/webhook') {
+    express.raw({ type: 'application/json' })(req, res, next)
+  } else {
+    express.json()(req, res, next)
+  }
+})
 app.use(express.urlencoded({ extended: true }))
 
 const lineConfig = {
